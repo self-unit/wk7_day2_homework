@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   instrumentMenu.bindEvents();
   console.log(instrumentMenu);
 
-  // const familyDiv = document.querySelector('div#family-info');
-  // const showFamilyDetails = new ResultView(familyDiv);
-  // showFamilyDetails.bindEvents();
-  // console.log(showFamilyDetails);
+  const familyDiv = document.querySelector('div#family-info');
+  const showFamilyDetails = new ResultView(familyDiv);
+  showFamilyDetails.bindEvents();
+  console.log(showFamilyDetails);
 
   const instrumentDataArray = new InstrumentFamilies();
   instrumentDataArray.bindEvents();

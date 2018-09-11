@@ -1,7 +1,7 @@
 const PubSub = require('../helpers/pub_sub.js');
 
-const ResultView = function (familyData) {
-  this.familyData = familyData;
+const ResultView = function (container) {
+  this.container = container;
 }
 
 ResultView.prototype.bindEvents = function () {
@@ -11,8 +11,17 @@ ResultView.prototype.bindEvents = function () {
   });
 };
 
-ResultView.prototype.Render = function (result) {
+ResultView.prototype.render = function (result) {
+  const title = document.createElement('h2');
+  title.textContent = `${result.name}`;
+  this.container.appendChild(title);
 
+  const infoParagraph = document.createElement('p');
+  infoParagraph.setAttribute('style', 'white-space: pre-line;');
+  infoParagraph.textContent = `${result.description}`;
+  this.container.appendChild(infoParagraph);
+
+  
 };
 
 module.exports = ResultView;
