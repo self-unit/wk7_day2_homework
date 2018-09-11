@@ -12,6 +12,7 @@ ResultView.prototype.bindEvents = function () {
 };
 
 ResultView.prototype.render = function (result) {
+  this.container.innerHTML = '';
   const familyTitle = document.createElement('h2');
   familyTitle.textContent = `${result.name}`;
   this.container.appendChild(familyTitle);
@@ -32,6 +33,7 @@ ResultView.prototype.render = function (result) {
     instrumentItem.textContent = `${instrument}`;
     instrumentList.appendChild(instrumentItem);
   });
+
 };
 
 module.exports = ResultView;
