@@ -28,7 +28,7 @@ ResultView.prototype.render = function (result) {
 
   const instrumentList = document.createElement('ul');
   this.container.appendChild(instrumentList);
-  result.instruments.forEach(function(instrument) {
+  result.instruments.forEach((instrument) => {
     const instrumentItem = document.createElement('li');
     instrumentItem.textContent = `${instrument}`;
     instrumentList.appendChild(instrumentItem);
